@@ -120,3 +120,6 @@ ro.config.low_ram=true
 
 #disable atlas service on low-tier devices
 config.disable_atlas=true
+
+#reduce background apps limit to 16 on low-tier devices
+ro.sys.fw.bg_apps_limit=16
