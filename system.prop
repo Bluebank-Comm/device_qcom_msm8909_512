@@ -28,6 +28,13 @@ dalvik.vm.heapsize=36m
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 
+# For low ram devices, set qHD resolution
+# with 240 dpi and enable navigation bar
+# by default as hard keys doesnt work.
+debug.hwc.fbsize=540x960
+ro.sf.lcd_density=240
+qemu.hw.mainkeys=0
+
 #ro.hdmi.enable=true
 #tunnel.decode=true
 #tunnel.audiovideo.decode=true
@@ -106,9 +113,6 @@ audio.offload.gapless.enabled=true
 
 #Set composition for USB
 persist.sys.usb.config=diag,serial_smd,rmnet_bam,adb
-
-# set lcd density
-ro.sf.lcd_density=480
 
 #property to enable user to access Google WFD settings
 persist.debug.wfd.enable=1
