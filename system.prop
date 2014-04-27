@@ -121,3 +121,6 @@ persist.hwc.enable_vds=1
 
 #enable low_ram property on low-tier devices
 ro.config.low_ram=true
+
+#disable atlas service on low-tier devices
+config.disable_atlas=true
