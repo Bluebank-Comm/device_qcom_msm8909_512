@@ -127,3 +127,8 @@ config.disable_atlas=true
 
 #reduce background apps limit to 16 on low-tier devices
 ro.sys.fw.bg_apps_limit=16
+
+#property to configure value of tile size and maxtile for swe
+swe.tile.width=128
+swe.tile.height=128
+swe.tile.maxtile=128
