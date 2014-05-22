@@ -45,7 +45,7 @@ qemu.hw.mainkeys=0
 #
 # system props for the cne module
 #
-persist.cne.feature=1
+persist.cne.feature=4
 
 #
 # system props for the dpm module
