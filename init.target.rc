@@ -27,7 +27,7 @@
 #
 #
 
-import ../msm8916_32/init.qti.carrier.rc
+import init.qti.carrier.rc
 
 on early-init
     mkdir /firmware 0771 system system
