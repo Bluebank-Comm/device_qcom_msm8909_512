@@ -23,3 +23,5 @@ include device/qcom/ferrum/BoardConfig.mk
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 2
 TARGET_ARCH_LOWMEM := true
 TARGET_USES_IMS := false
+#add suffix variable to uniquely identify the board
+TARGET_BOARD_SUFFIX := _512
