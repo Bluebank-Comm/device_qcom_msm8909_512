@@ -17,7 +17,7 @@
 # Product-specific compile-time definitions.
 #
 
-include device/qcom/ferrum/BoardConfig.mk
+include device/qcom/msm8909/BoardConfig.mk
 
 # Set the framebuffer size to 2 for low ram targets
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 2

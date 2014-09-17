@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/ferrum_512.mk
+	$(LOCAL_DIR)/msm8909_512.mk
