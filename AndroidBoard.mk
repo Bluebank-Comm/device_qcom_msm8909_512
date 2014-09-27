@@ -34,7 +34,7 @@ endif
 # Compile Linux Kernel
 #----------------------------------------------------------------------
 ifeq ($(KERNEL_DEFCONFIG),)
-    KERNEL_DEFCONFIG := msm8916-512mb_defconfig
+    KERNEL_DEFCONFIG := msm8909_defconfig
 endif
 
 include kernel/AndroidKernel.mk
@@ -49,7 +49,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := vold.fstab
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := ../ferrum/vold.fstab
+LOCAL_SRC_FILES    := ../msm8909/vold.fstab
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -80,14 +80,14 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := init.qcom.modem_links.sh
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := ../ferrum/init.qcom.modem_links.sh
+LOCAL_SRC_FILES    := ../msm8909/init.qcom.modem_links.sh
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE       := gpio-keys.kl
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := ../ferrum/gpio-keys.kl
+LOCAL_SRC_FILES    := ../msm8909/gpio-keys.kl
 LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
 include $(BUILD_PREBUILT)
 
@@ -95,7 +95,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := synaptics_rmi4_i2c.kl
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := ../ferrum/synaptics_rmi4_i2c.kl
+LOCAL_SRC_FILES    := ../msm8909/synaptics_rmi4_i2c.kl
 LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
 include $(BUILD_PREBUILT)
 
@@ -104,7 +104,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := wpa_supplicant_overlay.conf
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := ../ferrum/wpa_supplicant_overlay.conf
+LOCAL_SRC_FILES    := ../msm8909/wpa_supplicant_overlay.conf
 LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/wifi
 include $(BUILD_PREBUILT)
 
@@ -112,7 +112,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE       := p2p_supplicant_overlay.conf
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := ../ferrum/p2p_supplicant_overlay.conf
+LOCAL_SRC_FILES    := ../msm8909/p2p_supplicant_overlay.conf
 LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/wifi
 include $(BUILD_PREBUILT)
 
@@ -121,7 +121,7 @@ LOCAL_MODULE       := hostapd_default.conf
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/hostapd
-LOCAL_SRC_FILES    := ../ferrum/hostapd.conf
+LOCAL_SRC_FILES    := ../msm8909/hostapd.conf
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -129,7 +129,7 @@ LOCAL_MODULE       := hostapd.accept
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/hostapd
-LOCAL_SRC_FILES    := ../ferrum/hostapd.accept
+LOCAL_SRC_FILES    := ../msm8909/hostapd.accept
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -137,7 +137,7 @@ LOCAL_MODULE       := hostapd.deny
 LOCAL_MODULE_TAGS  := optional
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_PATH  := $(TARGET_OUT_ETC)/hostapd
-LOCAL_SRC_FILES    := ../ferrum/hostapd.deny
+LOCAL_SRC_FILES    := ../msm8909/hostapd.deny
 include $(BUILD_PREBUILT)
 
 #Create symbolic links
