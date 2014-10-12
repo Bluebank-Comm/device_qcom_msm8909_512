@@ -25,3 +25,5 @@ TARGET_ARCH_LOWMEM := true
 TARGET_USES_IMS := false
 #add suffix variable to uniquely identify the board
 TARGET_BOARD_SUFFIX := _512
+
+TARGET_LDPRELOAD := libNimsWrap.so
