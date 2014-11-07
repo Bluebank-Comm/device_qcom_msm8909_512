@@ -28,3 +28,6 @@ TARGET_BOARD_SUFFIX := _512
 
 TARGET_LDPRELOAD := libNimsWrap.so
 HAVE_SYNAPTICS_I2C_RMI4_FW_UPGRADE := true
+
+#Disable below Audio-features for 512 variant
+BOARD_SUPPORTS_SOUND_TRIGGER := false
