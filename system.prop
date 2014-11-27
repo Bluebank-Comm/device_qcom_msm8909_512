@@ -152,3 +152,6 @@ ro.sys.fw.bg_apps_limit=16
 swe.tile.width=128
 swe.tile.height=128
 swe.tile.maxtile=128
+
+#property to enable image unload by audio HAL
+sys.audio.init=false
