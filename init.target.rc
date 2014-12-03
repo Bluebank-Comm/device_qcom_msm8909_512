@@ -144,10 +144,9 @@ on property:init.svc.surfaceflinger=running
     start ppd
 
 service wcnss-service /system/bin/wcnss_service
-    class late_start
+    class main
     user system
-    group system wifi
-    oneshot
+    group system wifi radio
 
 service imsqmidaemon /system/bin/imsqmidaemon
     class main
