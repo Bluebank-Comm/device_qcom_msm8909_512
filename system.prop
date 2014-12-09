@@ -151,3 +151,6 @@ swe.tile.maxtile=128
 
 #property to enable image unload by audio HAL
 sys.audio.init=false
+
+#HWUI properties
+ro.hwui.text_large_cache_height=2048
