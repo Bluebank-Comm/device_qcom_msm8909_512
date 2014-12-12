@@ -163,3 +163,6 @@ ro.hwui.text_large_cache_height=2048
 
 #propery to change touch screen resolution
 persist.sys.synaptics_dsx.qhd=false
+
+# set max background services
+ro.config.max_starting_bg=8
