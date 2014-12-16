@@ -99,6 +99,7 @@ persist.fuse_sdcard=true
 # during Longshot usecase
 persist.camera.longshot.stages=1
 
+cameradaemon.SaveMemAtBoot=1
 #
 #snapdragon value add features
 #
