@@ -192,6 +192,12 @@ service ims_rtp_daemon /system/bin/ims_rtp_daemon
    group ims net_raw diag qcom_diag log
    disabled
 
+service gestureservice /system/bin/gestureservice
+   class main
+   user root
+   group root
+   disabled
+
 on property:sys.ims.DATA_DAEMON_STATUS=1
     start ims_rtp_daemon
 
