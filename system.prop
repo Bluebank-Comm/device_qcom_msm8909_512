@@ -90,6 +90,7 @@ telephony.lteOnCdmaDevice=1
 #
 persist.fuse_sdcard=true
 
+cameradaemon.SaveMemAtBoot=1
 #
 #snapdragon value add features
 #
