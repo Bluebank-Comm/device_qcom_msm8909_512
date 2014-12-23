@@ -104,7 +104,7 @@ service qseecomd /system/bin/qseecomd
    user root
    group root
 
-service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
+service perfd /system/bin/perfd
    user root
    disabled
 
