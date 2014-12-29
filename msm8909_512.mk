@@ -4,5 +4,8 @@ $(call inherit-product, device/qcom/msm8909/msm8909.mk)
 #QTIC flag
 -include $(QCPATH)/common/config/qtic-config.mk
 
+#spec service
+PRODUCT_PACKAGES += init.qti.carrier.rc
+
 PRODUCT_NAME := msm8909_512
 PRODUCT_DEVICE := msm8909_512
