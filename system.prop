@@ -91,6 +91,12 @@ telephony.lteOnCdmaDevice=1
 persist.fuse_sdcard=true
 
 cameradaemon.SaveMemAtBoot=1
+
+# System property for Camera
+# System prop to allocate Reprocess buffer as "1"
+# during Longshot usecase
+persist.camera.longshot.stages=1
+
 #
 #snapdragon value add features
 #
