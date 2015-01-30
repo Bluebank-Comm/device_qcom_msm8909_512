@@ -38,10 +38,6 @@ on early-init
     write /sys/kernel/mm/ksm/deferred_timer 1
     write /sys/kernel/mm/ksm/run 1
 
-# import cne init file
-on post-fs
-    export LD_PRELOAD /vendor/lib/libNimsWrap.so
-
 on fs
     mount_all fstab.qcom
     swapon_all fstab.qcom
