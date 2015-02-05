@@ -161,11 +161,19 @@ on charger
     load_all_props
     start qcom-post-boot
 
+service imsstarter /system/bin/sh /system/etc/init.qti.ims.sh
+    class main
+    oneshot
+
 service imsqmidaemon /system/bin/imsqmidaemon
     class main
     user system
     socket ims_qmid stream 0660 system radio
     group radio net_raw log qcom_diag
+    disabled
+
+on property:service.qti.ims.enabled=1
+    start imsqmidaemon
 
 service imsdatadaemon /system/bin/imsdatadaemon
     class main
