@@ -186,5 +186,5 @@ ro.sys.fw.trim_empty_percent=100
 ro.sys.fw.trim_cache_percent=100
 ro.sys.fw.trim_enable_memory=1073741824
 
-#Set very high PSS threshold(300KB) for the penalization to disable it
-ro.am.penalise_large_apps=307200
+#Set very high PSS threshold for the penalization to disable it
+ro.am.penalise_large_apps.pss=30000000
