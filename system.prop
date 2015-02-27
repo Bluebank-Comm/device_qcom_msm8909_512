@@ -191,3 +191,6 @@ ro.am.penalise_large_apps.pss=30000000
 
 # set cutoff voltage to 3200mV
 ro.cutoff_voltage_mv=3200
+
+# property to enable Lean mode
+ro.lean=true
