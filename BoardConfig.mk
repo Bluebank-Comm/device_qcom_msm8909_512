@@ -34,3 +34,6 @@ BOARD_SUPPORTS_SOUND_TRIGGER := false
 
 #Use dlmalloc instead of jemalloc for mallocs
 MALLOC_IMPL := dlmalloc
+
+#Enables some memory savings.
+TARGET_LEAN := true
