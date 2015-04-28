@@ -37,3 +37,7 @@ MALLOC_IMPL := dlmalloc
 
 #Enables some memory savings.
 TARGET_LEAN := true
+
+#Disable NFC
+TARGET_USES_QCA_NFC := false
+TARGET_ENABLE_SMARTCARD_SERVICE := false
