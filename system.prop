@@ -201,3 +201,6 @@ ro.lean=true
 ro.sys.fw.bservice_enable=true
 ro.sys.fw.bservice_limit=5
 ro.sys.fw.bservice_age=5000
+
+#save memory property for camera daemon
+cameradaemon.SaveMemAtBoot=1
