@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2012, The Linux Foundation. All rights reserved.
+     Not a Contribution.
+
+     Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--Borqs Bugzilla – Bug 2382.
+    Quick responce message : error empty message -->
+    <string name="quick_res_msg_err_msg">El mensaje de respuesta rápida no debería estar vacío</string>
+    <!-- BORQS CHANGES  BUG-ZILLA-14509-->
+    <string name="callFailed_dialInvalidNumber">El número que marcaste es inválido.</string>
+    <!--BORQS CHANGES FDN CHANGES BUGZILLA:9447-->
+    <!--<string name="fdn_invalid_name">El FDN no fue actualizado debido a que el número está vacío o porque el número no puede exceder de los 20 dígitos.</string>-->
+    <!--BORQS CR 33117.Since we are modifying the message so moved from strings.xml -->
+    <!-- FDN settings: error message displayed in a popup (toast) -->
+    <!-- BORQS CR 33117 END -->
+    <!-- ATT-BORQS: CR-0032900 (CDR-LTE-1836) -->
+    <!-- IMS registration preference -->
+    <string name="ims_reg_title">Modo 4G LTE mejorado</string>
+    <!-- Default IMS Registration State. -->
+    <!-- borqs_india end. -->
+    <!-- Bugzilla: 56910 start-->
+    <string name="audible_touch_tone_summary">Reproducir tono al marcar un número en el teclado.</string>
+    <!-- Bugzilla: 56910 end-->
+    <!-- BORQS: Bug - 20479 start -->
+    <string name="email"> Ingrese correo electrónico:</string>
+    <string name="anr"> Ingrese número telefónico adicional:</string>
+    <!-- BORQS: Bug - 20479 end -->
+    <!-- BORQS Bugzilla 20239: Error message to be shown when max call
+         limit reached in Conference -->
+    <string name="conference_call_error">Ha excedido el número máximo de llamadas de conferencia</string>
+</resources>

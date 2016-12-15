@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (c) 2012, The Linux Foundation. All rights reserved.
+     Not a Contribution.
+
+     Copyright (C) 2007 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!--ATT-BORQS CR:0032136.
+    additional call settings strings propogated-->
+    <add-resource type="string" name="audible_touch_tone_summary"></add-resource>
+    <string name="audible_touch_tone_summary">Play tone while dialing a number in dialer.</string>
+    <add-resource type="string" name="voicemail_provider_title"></add-resource>
+    <string name="voicemail_provider_title">Voicemail service</string>
+    <add-resource type="string" name="voicemail_settings_title"></add-resource>
+    <string name="voicemail_settings_title" >Voicemail settings</string>
+    <!--Borqs Bugzilla – Bug 2382.
+    Quick responce message : error empty message -->
+    <add-resource type="string" name="quick_res_msg_err_msg"></add-resource>
+    <string name="quick_res_msg_err_msg">Quick response message should not be empty</string>
+    <!--ATT-BORQS Emergency dialer CR: 0033528-->
+    <!--<string name="hidedialpad_longpress_hint">Hide dialpad to see search results</string>
+    <string name="ice_group">ICE Group</string>
+    <string name="emergency_numbers">Emergency Numbers</string>-->
+    <!--ATT-BORQS Emergency dialer -->
+    <!-- BORQS CHANGES  BUG-ZILLA-14509-->
+    <add-resource type="string" name="callFailed_dialInvalidNumber"></add-resource>
+    <string name="callFailed_dialInvalidNumber">The number you have dialed is invalid.</string>
+    <!--BORQS CHANGES FDN CHANGES BUGZILLA:9447-->
+   <!-- <string name="fdn_invalid_name">Name cannot be blank or exceed %s characters</string>-->
+    <!--BORQS CR 33117.Since we are modifying the message so moved from strings.xml -->
+    <!-- FDN settings: error message displayed in a popup (toast) -->
+    <!-- BORQS CR 33117 END -->
+    <!-- ATT-BORQS: CR-0032900 (CDR-LTE-1836) -->
+    <!-- IMS registration preference -->
+    <add-resource type="string" name="ims_reg_state"></add-resource>
+    <string translatable="false" name="ims_reg_state">IMSRegState</string>
+    <add-resource type="string" name="ims_reg_title"></add-resource>
+    <string name="ims_reg_title">Enhanced 4G LTE Mode</string>
+    <!-- Default IMS Registration State. -->
+    <add-resource type="string" name="default_ims_reg_state"></add-resource>
+    <string translatable="false" name="default_ims_reg_state">Enables enhanced voice and communications using LTE data (Recommended)
+    </string>
+    <!-- BORQS: Bug - 20479 start -->
+    <add-resource type="string" name="email"></add-resource>
+    <string name="email"> Enter Email:</string>
+    <add-resource type="string" name="anr"> Enter Additional Phone Number:</add-resource>
+    <string name="anr"> Enter Additional Phone Number:</string>
+    <!-- BORQS: Bug - 20479 end -->
+    <!-- borqs_india end. -->
+    <!-- BORQS Bugzilla 20239: Error message to be shown when max call
+         limit reached in Conference -->
+    <add-resource type="string" name="conference_call_error"></add-resource>
+    <string name="conference_call_error">The maximum number of conference call has been exceeded
+    </string>
+
+    <!-- Bugzilla 20751 : Modified string to indicate correct message to user -->
+    <string name="allContactdeleteSuccess"> Succesfully deleted contacts from SIM </string>
+
+    <!--BORQS CR 33117.Since we are modifying the message so moved from strings.xml -->
+    <!-- FDN settings: error message displayed in a popup (toast) -->
+    <string name="fdn_invalid_number">FDN wasn\'t updated because the number is empty or number can\'t exceed 20 digits.</string>
+    <!-- BORQS CR 33117 END -->
+</resources>

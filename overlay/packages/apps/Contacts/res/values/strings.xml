@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ BORQS Software Solutions Pvt Ltd. CONFIDENTIAL
+ ~ Copyright (c) 2012 All rights reserved.
+ ~
+ ~ The source code contained or described herein and all documents
+ ~ related to the source code ("Material") are owned by BORQS Software
+ ~ Solutions Pvt Ltd. No part of the Material may be used,copied,
+ ~ reproduced, modified, published, uploaded,posted, transmitted,
+ ~ distributed, or disclosed in any way without BORQS Software
+ ~ Solutions Pvt Ltd. prior written permission.
+ ~
+ ~ No license under any patent, copyright, trade secret or other
+ ~ intellectual property right is granted to or conferred upon you
+ ~ by disclosure or delivery of the Materials, either expressly, by
+ ~ implication, inducement, estoppel or otherwise. Any license
+ ~ under such intellectual property rights must be express and
+ ~ approved by BORQS Software Solutions Pvt Ltd. in writing.
+ ~
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Bugzilla: 59044 -->
+    <!-- ATT request change Join to Link and Separate to Unlink -->
+    <!-- Toast displayed when the user creates a new contact and attempts to join it
+      with another before entering any data  [CHAR LIMIT=256] -->
+    <string name="toast_join_with_empty_contact">Type contact name before linking
+      with another.
+    </string>
+        <!-- Menu item that joins an aggregate with another aggregate -->
+    <string name="menu_joinAggregate">Link</string>
+    <!-- Heading of the Join Contact screen -->
+    <string name="titleJoinContactDataWith">Link contacts</string>
+
+    <!-- Info blurb on the Join Contact screen [CHAR LIMIT=NONE]-->
+    <string name="blurbJoinContactDataWith">Choose the contact you want to link with <xliff:g id="name">%s</xliff:g>:</string>
+    <!-- Title of the confirmation dialog for separating contacts into multiple instances [CHAR LIMIT=26] -->
+    <string name="splitConfirmation_title">Unlink contact?</string>
+
+    <!-- Confirmation dialog for separating contacts into multiple instances [CHAR LIMIT=NONE] -->
+    <string name="splitConfirmation">This contact will be unlinked into multiple contacts.</string>
+    <!-- Menu item that splits an item from the contact detail into a separate aggregate -->
+    <string name="menu_splitAggregate">Unlink</string>
+    <!-- Toast shown after two contacts have been joined by a user action -->
+    <string name="contactsJoinedMessage">Contacts linked</string>
+    <!-- The message in a confirmation dialog shown when the user selects a
+    contact aggregation suggestion in Contact editor. [CHAR LIMIT=512]-->
+    <string name="aggregation_suggestion_join_dialog_message">Link
+        the current contact with the selected contact?</string>
+    <!-- START : String to set input mode to number -->
+    <string name="flexT9_numeric_default_input_mode">FlexT9DefaultModeNumber</string>
+    <!-- END : String to set input mode to number -->
+</resources>

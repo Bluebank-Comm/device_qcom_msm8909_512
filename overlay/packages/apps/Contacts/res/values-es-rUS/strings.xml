@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ BORQS Software Solutions Pvt Ltd. CONFIDENTIAL
+ ~ Copyright (c) 2012 All rights reserved.
+ ~
+ ~ The source code contained or described herein and all documents
+ ~ related to the source code ("Material") are owned by BORQS Software
+ ~ Solutions Pvt Ltd. No part of the Material may be used,copied,
+ ~ reproduced, modified, published, uploaded,posted, transmitted,
+ ~ distributed, or disclosed in any way without BORQS Software
+ ~ Solutions Pvt Ltd. prior written permission.
+ ~
+ ~ No license under any patent, copyright, trade secret or other
+ ~ intellectual property right is granted to or conferred upon you
+ ~ by disclosure or delivery of the Materials, either expressly, by
+ ~ implication, inducement, estoppel or otherwise. Any license
+ ~ under such intellectual property rights must be express and
+ ~ approved by BORQS Software Solutions Pvt Ltd. in writing.
+ ~
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Bugzilla: 59044 -->
+    <!-- ATT request change Join to Link and Separate to Unlink -->
+    <!-- Toast displayed when the user creates a new contact and attempts to join it
+      with another before entering any data  [CHAR LIMIT=256] -->
+    <string name="toast_join_with_empty_contact">Escriba el nombre del contacto antes de vincularlo con otro.
+    </string>
+        <!-- Menu item that joins an aggregate with another aggregate -->
+    <string name="menu_joinAggregate">Vincular</string>
+    <!-- Heading of the Join Contact screen -->
+    <string name="titleJoinContactDataWith">Vincular contactos</string>
+
+    <!-- Info blurb on the Join Contact screen [CHAR LIMIT=NONE]-->
+    <string name="blurbJoinContactDataWith">"Elija el contacto que desee vincular con <xliff:g id="NAME">%s</xliff:g>:"</string>
+    <!-- Title of the confirmation dialog for separating contacts into multiple instances [CHAR LIMIT=26] -->
+    <string name="splitConfirmation_title">¿Desvincular contacto?</string>
+
+    <!-- Confirmation dialog for separating contacts into multiple instances [CHAR LIMIT=NONE] -->
+    <string name="splitConfirmation">Este contacto estará desvinculado de diversos contactos.</string>
+    <!-- Menu item that splits an item from the contact detail into a separate aggregate -->
+    <string name="menu_splitAggregate">Desvincular</string>
+    <!-- Toast shown after two contacts have been joined by a user action -->
+    <string name="contactsJoinedMessage">Contactos vinculados</string>
+    <!-- The message in a confirmation dialog shown when the user selects a
+    contact aggregation suggestion in Contact editor. [CHAR LIMIT=512]-->
+    <string name="aggregation_suggestion_join_dialog_message">¿Vincular el contacto actual con el contacto seleccionado?</string>
+    <string name="clearFrequentsConfirmation" msgid="2101370440975269958">"Borrarás la lista de personas con las que te pones en contacto frecuentemente de las aplicaciones Personas y Teléfono."</string>
+</resources>

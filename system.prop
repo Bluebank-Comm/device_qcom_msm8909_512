@@ -19,6 +19,8 @@ DEVICE_PROVISIONED=1
 # Start in cdma mode
 ro.telephony.default_network=5
 
+ro.sf.lcd_density=160
+
 debug.sf.hw=1
 debug.egl.hw=1
 debug.composition.type=dyn

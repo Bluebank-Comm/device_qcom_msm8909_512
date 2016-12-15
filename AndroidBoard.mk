@@ -174,10 +174,12 @@ $(shell mkdir -p $(TARGET_OUT_ETC)/firmware/wlan/prima; \
         $(TARGET_OUT_ETC)/firmware/wlan/prima/WCNSS_qcom_cfg.ini)
 endif
 
+
 #----------------------------------------------------------------------
 # extra images
 #----------------------------------------------------------------------
 include device/qcom/common/generate_extra_images.mk
+include device/qcom/msm8909_512/generate_extra_images.mk
 
 #----------------------------------------------------------------------
 # pick up additional files for Tiny Android builds
