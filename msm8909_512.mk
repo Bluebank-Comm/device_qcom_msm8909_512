@@ -1,7 +1,6 @@
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 $(call inherit-product, device/qcom/msm8909/msm8909.mk)
 
-DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8909_512/overlay
 
 #QTIC flag
 -include $(QCPATH)/common/config/qtic-config.mk
@@ -10,8 +9,6 @@ DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8909_512/overlay
 PRODUCT_PACKAGES += init.qti.carrier.rc
 
 
-PRODUCT_COPY_FILES += \
-     device/qcom/msm8909_512/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
 PRODUCT_NAME := msm8909_512
 PRODUCT_DEVICE := msm8909_512
