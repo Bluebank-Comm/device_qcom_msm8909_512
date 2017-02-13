@@ -38,25 +38,13 @@ on early-init
     write /sys/kernel/mm/ksm/deferred_timer 1
     write /sys/kernel/mm/ksm/run 1
 
-on fs
-    mount_all fstab.qcom
-    swapon_all fstab.qcom
+on post-fs
+    export LD_PRELOAD libNimsWrap.so
 
-    # Keeping following partitions outside fstab file. As user may not have
-    # these partition flashed on the device. Failure to mount any partition in fstab file
-    # results in failure to launch late-start class.
+import init.emmc.${ro.boot.emmc}.rc
 
-    wait /dev/block/bootdevice/by-name/cache
-    mount ext4 /dev/block/bootdevice/by-name/cache /cache nosuid nodev barrier=1
 
-    wait /dev/block/bootdevice/by-name/persist
-    mount ext4 /dev/block/bootdevice/by-name/persist /persist nosuid nodev barrier=1
-    mkdir /persist/data 0700 system system
-    restorecon_recursive /persist
 
-    wait /dev/block/bootdevice/by-name/modem
-    mount vfat /dev/block/bootdevice/by-name/modem /firmware ro context=u:object_r:firmware_file:s0,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337
-    #write /sys/kernel/boot_adsp/boot 1
 
 on post-fs-data
     mkdir /data/tombstones 0771 system system
@@ -66,6 +54,7 @@ on post-fs-data
     mkdir /tombstones/dsps 0771 system system
     mkdir /persist/data/sfs 0700 system system
     mkdir /persist/data/tz 0700 system system
+    mkdir /data/misc/dts 0770 media audio
 
 #start camera server as daemon
 service qcamerasvr /system/bin/mm-qcamera-daemon
@@ -103,12 +92,12 @@ service qseecomd /system/bin/qseecomd
    user root
    group root
 
-service perfd /system/bin/perfd
+service perfd /system/vendor/bin/perfd
    class main
    user root
    disabled
 
-service thermal-engine /system/bin/thermal-engine
+service thermal-engine /system/vendor/bin/thermal-engine
    class main
    user root
    socket thermal-send-client stream 0666 system system
@@ -126,10 +115,26 @@ service audiod /system/bin/audiod
    user system
    group system
 
+on charger
+   wait /dev/block/bootdevice/by-name/system
+   mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
+   chown root system /sys/class/power_supply/bms/current_now
+   chown root system /sys/class/power_supply/bms/voltage_ocv
+   chmod 0664 /sys/class/power_supply/bms/current_now
+   chmod 0664 /sys/class/power_supply/bms/voltage_ocv
+   start vm_bms
+   load_all_props
+   start qcom-post-boot
+
 on boot
-    start rmt_storage
     insmod /system/lib/modules/adsprpc.ko
     write /proc/sys/vm/swappiness 100
+
+service wcnss-service /system/bin/wcnss_service
+    class late_start
+    user system
+    group system wifi radio
+    oneshot
 
 service ppd /system/bin/mm-pp-daemon
     class late_start
@@ -149,26 +154,12 @@ on property:init.svc.surfaceflinger=stopped
 on property:init.svc.surfaceflinger=running
     start ppd
 
-service wcnss-service /system/bin/wcnss_service
-    class main
-    user system
-    group system wifi radio
-    oneshot
-
-on charger
-    wait /dev/block/bootdevice/by-name/system
-    mount ext4 /dev/block/bootdevice/by-name/system /system ro barrier=1
-    chown root system /sys/class/power_supply/bms/current_now
-    chown root system /sys/class/power_supply/bms/voltage_ocv
-    chmod 0664 /sys/class/power_supply/bms/current_now
-    chmod 0664 /sys/class/power_supply/bms/voltage_ocv
-    start vm_bms
-    load_all_props
-    start qcom-post-boot
-
 service imsstarter /system/bin/sh /system/etc/init.qti.ims.sh
     class main
     oneshot
+
+on property:vold.decrypt=trigger_restart_framework
+    start imsstarter
 
 service imsqmidaemon /system/bin/imsqmidaemon
     class main
@@ -179,6 +170,7 @@ service imsqmidaemon /system/bin/imsqmidaemon
 
 on property:service.qti.ims.enabled=1
     start imsqmidaemon
+    start imsdatadaemon
 
 service imsdatadaemon /system/bin/imsdatadaemon
     class main
@@ -194,11 +186,18 @@ service ims_rtp_daemon /system/bin/ims_rtp_daemon
    class main
    user system
    socket ims_rtpd stream 0660 system radio
+   group radio net_raw diag qcom_diag log inet
+   disabled
+
+service imscmservice /system/bin/imscmservice
+   class main
+   user system
    group radio net_raw diag qcom_diag log
    disabled
 
 on property:sys.ims.DATA_DAEMON_STATUS=1
     start ims_rtp_daemon
+    start imscmservice
 
 service touch /system/bin/sh /system/etc/init.qti.synaptics_dsx_qhd.sh
    class late_start
@@ -207,8 +206,17 @@ service touch /system/bin/sh /system/etc/init.qti.synaptics_dsx_qhd.sh
    oneshot
    disabled
 
-on property:persist.sys.synaptics_dsx.qhd=true
+service dts_configurator /system/bin/dts_configurator
+   class main
+   user system
+   group system
+   oneshot
+
+on property:ro.boot.panelname=hx8394d_qhd_video
    start touch
 
-on property:persist.sys.synaptics_dsx.qhd=false
-   stop touch
+on property:ro.boot.panelname=hx8394d_wvga_video
+   start touch
+
+on property:ro.boot.panelname=hx8394d_hvga_video
+   start touch
