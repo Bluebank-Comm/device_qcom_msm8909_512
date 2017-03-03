@@ -49,6 +49,9 @@ persist.gralloc.cp.level3=1
 #
 persist.cne.feature=4
 
+# enable IMS by default
+persist.ims.disabled=0
+
 #system props for the MM modules
 media.stagefright.enable-player=true
 media.stagefright.enable-http=true
