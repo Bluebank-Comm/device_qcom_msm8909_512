@@ -123,10 +123,10 @@ LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
-LOCAL_MODULE       := matrix_keypad_69.kl
+LOCAL_MODULE       := matrix_keypad.kl
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
-LOCAL_SRC_FILES    := ../msm8909/matrix_keypad_69.kl
+LOCAL_SRC_FILES    := ../msm8909/matrix_keypad.kl
 LOCAL_MODULE_PATH  := $(TARGET_OUT_KEYLAYOUT)
 include $(BUILD_PREBUILT)
 
