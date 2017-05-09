@@ -44,6 +44,6 @@
 /dev/block/bootdevice/by-name/abootbak     /abootbk        emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/persist      /persist        ext4    noatime,nosuid,nodev,barrier=1,data=ordered                     wait,check
 /dev/block/bootdevice/by-name/fsg          /fsg            emmc    defaults                                                        defaults
-/dev/block/bootdevice/by-name/modem        /firmware       emmc    defaults                                                        defaults
+/dev/block/bootdevice/by-name/modem        /firmware       vfat    ro,barrier=1                                                    wait
 /dev/block/bootdevice/by-name/modemst1     /modemst1       emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/modemst2     /modemst2       emmc    defaults                                                        defaults

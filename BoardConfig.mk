@@ -50,3 +50,6 @@ BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
 
 #Enables IMS
 TARGET_USES_IMS := true
+#fota
+TARGET_NEED_OEM_FOTA_META := true
+ADD_RADIO_FILES ?= true
