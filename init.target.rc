@@ -50,7 +50,7 @@ on fs
     mount_all fstab.qcom
     swapon_all fstab.qcom
     wait /dev/block/bootdevice/by-name/system
-    mount ext4   /dev/block/bootdevice/by-name/system /system   barrier=1
+    mount ext4   /dev/block/bootdevice/by-name/system /system   ro barrier=1
     restorecon_recursive   /system
 
     wait /dev/block/bootdevice/by-name/cache
