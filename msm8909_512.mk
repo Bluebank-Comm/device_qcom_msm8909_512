@@ -22,7 +22,7 @@ PRODUCT_PACKAGES += \
   nfc_nci.pn54x.default \
   nfcd \
   libnfc-mifare \
-  libp61-jcop-kit
+  libese-jcop-kit
 
 # NFC configuration files
 PRODUCT_COPY_FILES += \
