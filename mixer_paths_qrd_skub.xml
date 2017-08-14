@@ -597,8 +597,10 @@
     </path>
 
     <path name="handset">
-        <path name="speaker" />
-        <ctl name="RX3 Digital Volume" value="50" />
+        <ctl name="RX1 MIX1 INP1" value="RX1" />
+        <ctl name="RDAC2 MUX" value="RX1" />
+        <ctl name="RX1 Digital Volume" value="84" />
+        <ctl name="EAR_S" value="Switch" />
     </path>
 
     <path name="handset-mic">
