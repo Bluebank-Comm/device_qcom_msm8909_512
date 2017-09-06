@@ -26,7 +26,6 @@ TARGET_USES_IMS := false
 #add suffix variable to uniquely identify the board
 TARGET_BOARD_SUFFIX := _512
 
-TARGET_LDPRELOAD := libNimsWrap.so
 HAVE_SYNAPTICS_I2C_RMI4_FW_UPGRADE := true
 
 #Disable below Audio-features for 512 variant
