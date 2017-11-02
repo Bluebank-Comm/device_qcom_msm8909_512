@@ -47,6 +47,9 @@ BOARD_SUPPORTS_SOUND_TRIGGER := false
 GET_FRAMEBUFFER_FORMAT_FROM_HWC := true
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
 
+#Enable the IPv6 tethering
+ENABLE_RADVD := true
+
 #Enables IMS
 TARGET_USES_IMS := true
 #fota
