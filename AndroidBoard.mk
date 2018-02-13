@@ -34,7 +34,7 @@ endif
 # Compile Linux Kernel
 #----------------------------------------------------------------------
 ifeq ($(KERNEL_DEFCONFIG),)
-    ifneq ($(filter user userdebug, $(TARGET_BUILD_VARIANT)),)
+    ifneq ($(filter user, $(TARGET_BUILD_VARIANT)),)
         KERNEL_DEFCONFIG := msm8909-perf_defconfig
     else
         KERNEL_DEFCONFIG := msm8909_defconfig
