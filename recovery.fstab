@@ -49,3 +49,5 @@
 /dev/block/bootdevice/by-name/modemst1     /modemst1       emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/modemst2     /modemst2       emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/sec          /sec            emmc    defaults                                                        defaults
+/dev/block/bootdevice/by-name/keystore     /keystore       emmc    defaults                                                        defaults
+/dev/block/bootdevice/by-name/devinfo      /devinfo        emmc    defaults                                                        defaults

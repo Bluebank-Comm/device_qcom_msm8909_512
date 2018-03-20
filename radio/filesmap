@@ -29,11 +29,11 @@
 
 NON-HLOS.bin            /dev/block/bootdevice/by-name/modem
 
+splash.bin              /dev/block/bootdevice/by-name/splash
 sbl1.mbn                /dev/block/bootdevice/by-name/sbl1
 tz.mbn                  /dev/block/bootdevice/by-name/tz
 rpm.mbn                 /dev/block/bootdevice/by-name/rpm
 emmc_appsboot.mbn       /dev/block/bootdevice/by-name/aboot
-hyp.mbn                 /dev/block/bootdevice/by-name/hyp
 
 # filename + .bak       backup partition
 
@@ -41,7 +41,6 @@ sbl1.mbn.bak            /dev/block/bootdevice/by-name/sbl1bak
 tz.mbn.bak              /dev/block/bootdevice/by-name/tzbak
 rpm.mbn.bak             /dev/block/bootdevice/by-name/rpmbak
 emmc_appsboot.mbn.bak   /dev/block/bootdevice/by-name/abootbak
-hyp.mbn.bak             /dev/block/bootdevice/by-name/hypbak
 
 # For multiple file firmware images that differ from *.mbn and *.bin
 # you can specify filename.* to direct all files to the same location.
@@ -56,3 +55,6 @@ modem.*                 /dev/block/bootdevice/by-name/modem
 wcnss.*                 /dev/block/bootdevice/by-name/modem
 widevine.*              /dev/block/bootdevice/by-name/modem
 adsp.*                  /dev/block/bootdevice/by-name/modem
+cmnlib.*                /dev/block/bootdevice/by-name/modem
+keymaste.*              /dev/block/bootdevice/by-name/modem
+mba.*                   /dev/block/bootdevice/by-name/modem
