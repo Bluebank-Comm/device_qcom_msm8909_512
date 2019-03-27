@@ -1,7 +1,8 @@
 $(call inherit-product, frameworks/native/build/phone-hdpi-512-dalvik-heap.mk)
 PRODUCT_COPY_FILES += \
        device/qcom/msm8909_512/mixer_paths_qrd_skub.xml:system/etc/mixer_paths_qrd_skub.xml \
-       device/qcom/msm8909_512/mixer_paths_qrd_sku3.xml:system/etc/mixer_paths_qrd_sku3.xml
+       device/qcom/msm8909_512/mixer_paths_qrd_sku3.xml:system/etc/mixer_paths_qrd_sku3.xml \
+       device/qcom/msm8909_512/mixer_paths_wcd9340_i2s.xml:system/etc/mixer_paths_wcd9340_i2s.xml
 
 PRODUCT_COPY_FILES += device/qcom/msm8909/media/media_codecs_8905.xml:system/etc/media_codecs_8905.xml
 
