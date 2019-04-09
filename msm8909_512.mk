@@ -31,6 +31,10 @@ PRODUCT_PACKAGES += \
   nfc_nci.pn54x.default \
   nfcd \
   libnfc-mifare \
+  libgcs \
+  libgcs-calwrapper \
+  libgcs-ipc \
+  libgcs-osal \
   libese-jcop-kit
 
 # NFC configuration files
