@@ -1452,9 +1452,21 @@
     </path>
 
     <path name="adc2">
-        <ctl name="ADC2 Volume" value="6" />
-        <ctl name="DEC1 MUX" value="ADC2" />
-        <ctl name="ADC2 MUX" value="INP2" />
+	<ctl name="AIF1_CAP Mixer I2S TX7" value="1" />
+	<ctl name="CDC_IF TX7 MUX" value="DEC7" />
+	<ctl name="MI2S_TX Channels" value="One" />
+	<ctl name="ADC MUX7" value="AMIC" />
+	<ctl name="AMIC MUX7" value="ADC2" />
+	<ctl name="DEC7 Volume" value="84" />
+    </path>
+
+    <!--Secondary Mic-->
+    <path name="adc3">
+        <ctl name="AIF1_CAP Mixer I2S TX7" value="1" />
+        <ctl name="CDC_IF TX7 MUX" value="DEC7" />
+        <ctl name="ADC MUX7" value="AMIC" />
+        <ctl name="AMIC MUX7" value="ADC3" />
+        <ctl name="DEC7 Volume" value="84" />
     </path>
 
     <!-- For Tasha, DMIC numbered from 0 to 5 -->
@@ -1661,13 +1673,13 @@
         <path name="headphones" />
     </path>
 
-    <!--path name="headset-mic">
+    <path name="headset-mic">
         <path name="adc2" />
     </path>
 
     <path name="headset-mic-liquid">
         <path name="adc2" />
-    </path-->
+    </path>
 
     <path name="voice-handset">
         <path name="handset" />
@@ -1770,27 +1782,27 @@
     </path>
 
     <!-- Dual MIC devices -->
-    <!--path name="handset-dmic-endfire">
-        <ctl name="AIF1_CAP Mixer SLIM TX6" value="1" />
-        <ctl name="AIF1_CAP Mixer SLIM TX7" value="1" />
-        <ctl name="SLIM TX6 MUX" value="DEC6" />
-        <ctl name="ADC MUX6" value="DMIC" />
-        <ctl name="DMIC MUX6" value="DMIC0" />
-        <ctl name="SLIM TX7 MUX" value="DEC7" />
-        <ctl name="ADC MUX7" value="DMIC" />
-        <ctl name="DMIC MUX7" value="DMIC3" />
+    <path name="handset-dmic-endfire">
+        <ctl name="AIF1_CAP Mixer I2S TX6" value="1" />
+        <ctl name="AIF1_CAP Mixer I2S TX7" value="1" />
+        <ctl name="CDC_IF TX6 MUX" value="DEC6" />
+        <ctl name="ADC MUX6" value="AMIC" />
+        <ctl name="AMIC MUX6" value="ADC1" />
+        <ctl name="CDC_IF TX7 MUX" value="DEC7" />
+        <ctl name="ADC MUX7" value="AMIC" />
+        <ctl name="AMIC MUX7" value="ADC3" />
         <ctl name="MI2S_TX Channels" value="Two" />
     </path>
 
     <path name="speaker-dmic-endfire">
-        <ctl name="AIF1_CAP Mixer SLIM TX6" value="1" />
-        <ctl name="AIF1_CAP Mixer SLIM TX7" value="1" />
-        <ctl name="SLIM TX6 MUX" value="DEC6" />
-        <ctl name="ADC MUX6" value="DMIC" />
-        <ctl name="DMIC MUX6" value="DMIC0" />
-        <ctl name="SLIM TX7 MUX" value="DEC7" />
-        <ctl name="ADC MUX7" value="DMIC" />
-        <ctl name="DMIC MUX7" value="DMIC3" />
+        <ctl name="AIF1_CAP Mixer I2S TX6" value="1" />
+        <ctl name="AIF1_CAP Mixer I2S TX7" value="1" />
+        <ctl name="CDC_IF TX6 MUX" value="DEC6" />
+        <ctl name="ADC MUX6" value="AMIC" />
+        <ctl name="AMIC MUX6" value="ADC3" />
+        <ctl name="CDC_IF TX7 MUX" value="DEC7" />
+        <ctl name="ADC MUX7" value="AMIC" />
+        <ctl name="AMIC MUX7" value="ADC1" />
         <ctl name="MI2S_TX Channels" value="Two" />
     </path>
 
@@ -1828,7 +1840,7 @@
         <path name="dmic-endfire" />
     </path>
 
-    <path name="speaker-dmic-broadside">
+    <!--path name="speaker-dmic-broadside">
         <ctl name="AIF1_CAP Mixer SLIM TX6" value="1" />
         <ctl name="AIF1_CAP Mixer SLIM TX7" value="1" />
         <ctl name="MI2S_TX Channels" value="Two" />
