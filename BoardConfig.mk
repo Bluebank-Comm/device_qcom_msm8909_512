@@ -31,6 +31,10 @@ HAVE_SYNAPTICS_I2C_RMI4_FW_UPGRADE := true
 #Disable below Audio-features for 512 variant
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 
+#Enable FFV
+AUDIO_FEATURE_ENABLED_KEEP_ALIVE_ARM_FFV := true
+AUDIO_FEATURE_ENABLED_FFV := true
+
 #Enable Sound trigger Multi stage feature
 AUDIO_FEATURE_ENABLED_SVA_MULTI_STAGE := true
 
