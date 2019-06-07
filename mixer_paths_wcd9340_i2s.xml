@@ -1452,12 +1452,11 @@
     </path>
 
     <path name="adc2">
-	<ctl name="AIF1_CAP Mixer I2S TX7" value="1" />
-	<ctl name="CDC_IF TX7 MUX" value="DEC7" />
-	<ctl name="MI2S_TX Channels" value="One" />
-	<ctl name="ADC MUX7" value="AMIC" />
-	<ctl name="AMIC MUX7" value="ADC2" />
-	<ctl name="DEC7 Volume" value="84" />
+	<ctl name="AIF1_CAP Mixer I2S TX6" value="1" />
+	<ctl name="CDC_IF TX6 MUX" value="DEC6" />
+	<ctl name="ADC MUX6" value="AMIC" />
+	<ctl name="AMIC MUX6" value="ADC2" />
+	<ctl name="DEC6 Volume" value="84" />
     </path>
 
     <!--Secondary Mic-->
@@ -1709,10 +1708,10 @@
         <path name="voice-headphones" />
     </path>
 
-    <!--path name="voice-headset-mic">
+    <path name="voice-headset-mic">
         <path name="headset-mic" />
         <ctl name="ADC2 Volume" value="12" />
-    </path-->
+    </path>
 
     <path name="speaker-and-headphones">
         <path name="wsa-speaker-mono" />
