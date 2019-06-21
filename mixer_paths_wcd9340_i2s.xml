@@ -1112,6 +1112,7 @@
     <path name="play-fm">
         <ctl name="Internal FM RX Volume" value="1" />
         <ctl name="QUAT_MI2S_RX Port Mixer INTERNAL_FM_TX" value="1" />
+        <ctl name="QUAT_MI2S_RX_DL_HL Switch" value="1" />
     </path>
 
     <path name="incall-rec-uplink">
@@ -1452,10 +1453,12 @@
     </path>
 
     <path name="adc2">
+ 
 	<ctl name="AIF1_CAP Mixer I2S TX6" value="1" />
-	<ctl name="CDC_IF TX6 MUX" value="DEC6" />
-	<ctl name="ADC MUX6" value="AMIC" />
-	<ctl name="AMIC MUX6" value="ADC2" />
+	<ctl name="CDC_IF TX6 MUX" value="DEC7" />
+ 	<ctl name="MI2S_TX Channels" value="One" /> 
+	<ctl name="ADC TX6" value="AMIC" />
+	<ctl name="AMIC TX6" value="ADC2" />
 	<ctl name="DEC6 Volume" value="84" />
     </path>
 

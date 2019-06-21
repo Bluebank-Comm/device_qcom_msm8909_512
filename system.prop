@@ -208,3 +208,8 @@ ro.sys.fw.bservice_age=5000
 
 #save memory property for camera daemon
 cameradaemon.SaveMemAtBoot=1
+
+#add torch sys node property for torch
+ro.kaios.torch_node=/sys/class/flashlight/torch/enable
+ro.kaios.torch_enable_value=1
+
