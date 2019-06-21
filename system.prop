@@ -16,8 +16,8 @@ persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
 ril.subscription.types=NV,RUIM
 DEVICE_PROVISIONED=1
-# Start in cdma mode
-ro.telephony.default_network=5
+# Start in lte mode
+ro.telephony.default_network=11
 
 debug.sf.hw=1
 debug.egl.hw=1
@@ -110,7 +110,7 @@ persist.camera.longshot.stages=1
 #
 ro.qc.sdk.audio.ssr=false
 ##fluencetype can be "fluence" or "fluencepro" or "none"
-ro.qc.sdk.audio.fluencetype=none
+ro.qc.sdk.audio.fluencetype=fluence
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
 persist.audio.fluence.speaker=true
@@ -208,3 +208,12 @@ ro.sys.fw.bservice_age=5000
 
 #save memory property for camera daemon
 cameradaemon.SaveMemAtBoot=1
+
+#add torch sys node property for torch
+ro.kaios.torch_node=/sys/class/flashlight/torch/enable
+ro.kaios.torch_enable_value=1
+
+#bluebank add for network type
+ro.moz.ril.0.network_types=lte
+#bluebank add for network type
+

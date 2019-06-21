@@ -29,7 +29,14 @@ TARGET_BOARD_SUFFIX := _512
 HAVE_SYNAPTICS_I2C_RMI4_FW_UPGRADE := true
 
 #Disable below Audio-features for 512 variant
-BOARD_SUPPORTS_SOUND_TRIGGER := false
+BOARD_SUPPORTS_SOUND_TRIGGER := true
+
+#Enable FFV
+AUDIO_FEATURE_ENABLED_KEEP_ALIVE_ARM_FFV := true
+AUDIO_FEATURE_ENABLED_FFV := true
+
+#Enable Sound trigger Multi stage feature
+AUDIO_FEATURE_ENABLED_SVA_MULTI_STAGE := true
 
 #Use dlmalloc instead of jemalloc for mallocs
 MALLOC_IMPL := dlmalloc
@@ -43,7 +50,6 @@ TARGET_ENABLE_SMARTCARD_SERVICE := false
 
 #Disable SVA listen app
 AUDIO_FEATURE_ENABLED_LISTEN := false
-BOARD_SUPPORTS_SOUND_TRIGGER := false
 GET_FRAMEBUFFER_FORMAT_FROM_HWC := true
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
 
